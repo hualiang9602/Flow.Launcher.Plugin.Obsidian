@@ -13,14 +13,6 @@
     mc:Ignorable="d">
 
 
-    <UserControl.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/Flow.Launcher.Plugin.Obsidian;component/Style.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </UserControl.Resources>
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -37,10 +29,10 @@
             Padding="0 0 0 10"
             BorderThickness="0"
             CornerRadius="0"
-            Style="{StaticResource SettingGroupBox}">
+            Style="{DynamicResource SettingGroupBox}">
 
             <StackPanel
-                Margin="{StaticResource SettingPanelMargin}"
+                Margin="{DynamicResource SettingPanelMargin}"
                 Orientation="Vertical">
 
                 <TextBlock
@@ -60,7 +52,7 @@
             Padding="0"
             BorderThickness="0, 1, 0 , 0"
             CornerRadius="0"
-            Style="{StaticResource SettingGroupBox}">
+            Style="{DynamicResource SettingGroupBox}">
 
             <StackPanel Grid.Row="2">
                 <Button

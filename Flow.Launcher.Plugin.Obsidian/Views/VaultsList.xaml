@@ -10,14 +10,6 @@
     d:DesignWidth="550"
     mc:Ignorable="d">
 
-    <UserControl.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="../Style.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </UserControl.Resources>
-
 
     <ItemsControl
         ItemsSource="{Binding Vaults}"
@@ -36,7 +28,7 @@
                                 Width="Auto"
                                 Height="Auto"
                                 Padding="18 12 0 12"
-                                Style="{StaticResource SettingGroupBox}">
+                                Style="{DynamicResource SettingGroupBox}">
                                 <ContentPresenter />
                             </Border>
 
@@ -72,21 +64,21 @@
                         <StackPanel Grid.Column="1" Margin="16 0 14 0">
                             <TextBlock
                                 Text="{Binding Name}"
-                                Style="{StaticResource SettingTitleLabel}" />
+                                Style="{DynamicResource SettingTitleLabel}" />
 
                             <TextBlock
                                 Margin="0 2 0 0"
                                 Text="{Binding VaultPath}"
-                                Style="{StaticResource SettingSubTitleLabel}" />
+                                Style="{DynamicResource SettingSubTitleLabel}" />
                         </StackPanel>
 
                         <TextBlock
                             Grid.Column="2"
                             Text="{Binding FilesCount, StringFormat={}{0} Files }"
-                            Margin="{StaticResource SettingPanelItemRightMargin}"
+                            Margin="0,0,9,0"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Right"
-                            Style="{StaticResource SettingTitleLabel}" />
+                            Style="{DynamicResource SettingTitleLabel}" />
 
                         <controls:ToggleSwitch
                             Grid.Column="3"

@@ -24,7 +24,9 @@
   <ItemGroup Label="Package References">
     <PackageReference Include="Flow.Launcher.Plugin" Version="4.6.0"/>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0"/>
-    <PackageReference Include="ModernWpfUI" Version="0.9.4" ExcludeAssets="runtime;contentFiles"/>
+    <!-- Flow Launcher 2.x ships iNKORE.UI.WPF.Modern instead of ModernWpf, so the plugin
+         must carry its own ModernWpf runtime assemblies for the settings UI to load. -->
+    <PackageReference Include="ModernWpfUI" Version="0.9.4"/>
   </ItemGroup>
 
   <ItemGroup Label="Resources">
